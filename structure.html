@@ -16,7 +16,6 @@
         }
 
         section {
-            height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -24,6 +23,20 @@
             text-align: center;
             padding-top: 10em;
             gap: 5em;
+        }
+
+        section.one {
+            flex-direction: row;
+            justify-content: center;
+            height: 30vh;
+        }
+
+        section.two {
+            height: 70vh;
+        }
+
+        input {
+            padding: 1em 2em 1em 2em;
         }
 
         button {
@@ -42,19 +55,38 @@
             background-color: peachpuff;
         }
 
+        .delete-btn {
+            background-color: transparent;
+            border: none;
+            color: white;
+            height: 1em;
+            width: 1em;
+            transition: none;
+        }
+
+        .delete-btn:hover{
+            color: red;
+            background-color: transparent;
+        }
+
         ul {
             color: white;
             font-weight: 400;
+            list-style: none;
+            text-align: right;
         }
     </style>
 </head>
 <body>
     <main>
-        <section>
-            <input id="taskInput">
-            <button id="button">Add</button>
+        <section class="one">
+            <div>
+                <input id="taskInput">
+                <button id="button">Add</button>
+            </div>
+        </section>
+        <section class="two">
             <ul id="toDoList" class="to-do-list">
-                <li>Example Item</li>
             </ul>
         </section>
     </main>
