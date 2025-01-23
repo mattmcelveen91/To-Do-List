@@ -11,6 +11,15 @@
             padding: 0;
         }
 
+        h1, h2, h3, p, li {
+            color: white;
+            font-family: verdana;
+        }
+
+        h1 {
+            font-size: 5em;
+        }
+
         body {
             background-color: rgb(30, 24, 24);
         }
@@ -21,14 +30,13 @@
             align-items: center;
             align-content: center;
             text-align: center;
-            padding-top: 10em;
-            gap: 5em;
+            padding-top: 5em;
         }
 
         section.one {
             flex-direction: row;
             justify-content: center;
-            height: 30vh;
+            height: 5vh;
         }
 
         section.two {
@@ -73,12 +81,27 @@
             color: white;
             font-weight: 400;
             list-style: none;
-            text-align: right;
+            text-align: left;
         }
-    </style>
+
+        li {
+            padding: 10px;
+            border-radius: 5px;
+            background-color: gray;
+            cursor: grab;
+        }
+
+        li:active  {
+            cursor: grabbing;
+        }
+        
+</style>
 </head>
 <body>
     <main>
+        <section>
+            <h1>Small Task List</h1>
+        </section>
         <section class="one">
             <div>
                 <input id="taskInput">
